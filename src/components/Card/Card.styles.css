@@ -1,0 +1,135 @@
+.card{
+    flex-wrap: wrap;
+    width: 20%;
+    height: 200px;
+    margin: 20px 2.5% 0;
+    
+}
+.card-container{
+    perspective: 1000px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+ 
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+  
+
+
+.rotate-180{
+    transform: rotateY(-180deg);
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.rotate-0{
+    transform: rotateY(0deg);
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 20px;
+    transition:box-shadow .3s ease;
+  }
+  
+.flip-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+.flip-card-back {
+    background-color: #FFD2D7;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-image{
+    height: 150px;
+}
+.move-to-wallet{
+    position: absolute !important;
+    transition: all 1s ease-in;
+    animation: move-to-wallet 2s linear ;
+}
+
+@keyframes move-to-wallet {
+    0%{
+        width: 20%;
+        height: 200px;
+        bottom: 0;
+        right: 0;
+        transform: translateX(-100px);
+    }
+    50%{
+        width: 90px;
+        height: 80px;
+    }
+	100% {
+        transform: translateY(110px);
+        opacity: .7;
+	}
+  }
+
+.display-none{
+    display: none;
+    cursor:none;
+}
+
+
+.flip-card-front:hover, .flip-card-back:hover {
+    box-shadow: 0 8px 50px #FFD2D7;
+    
+}
+.flip-card-front:hover{
+    transform: scale(.7);
+}
+
+
+h4{
+    color: #5a5b61;
+    margin-top: 4px;
+}
+
+.card-hidden{
+    width: 100%;
+    height: 100%;
+    background-color: #8062D6;
+    border-radius: 20px;
+    position: relative;
+}
+
+.card-icon{
+    width: 100%;
+    height: 100%;
+    font-size: 70px;
+    position: absolute;
+    transition: transform .1s ease;
+    color: #FFD2D7;
+}
+
+.card-icon:hover{
+    transform: translateY(-20px) scale(1.4);
+}

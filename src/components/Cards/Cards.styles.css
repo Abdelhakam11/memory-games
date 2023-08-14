@@ -1,0 +1,27 @@
+.cards{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+.card-contianer{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.wallet-container{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: end;
+}
+.wallet {
+    height: 100%;
+    font-size: 150px;
+    color: #FFD2D7;
+    margin-right: 2.5%;
+}
